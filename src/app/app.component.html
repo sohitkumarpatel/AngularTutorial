@@ -1,4 +1,94 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<input type="text"[disabled]="disabledBox" [value]="name">
+<!-- <button (click)="getVal(box.value)">Get Value</button> -->
+<!-- <h3>{{currentVal}}</h3> -->
+<br>
+<br>
+<input type="text" disabled={{disabledBox}} value={{name}}>
+<br>
+<br>
+<button (click)="enableBox()">Enable TextBox</button>
+
+<br>
+<br>
+<h1>Condition in Angular</h1>
+<!-- <h1 *ngIf="show=='yes'then ifBlock else elseBlock">
+  if block
+</h1>
+
+<ng-template #ifBlock>
+<h1>if Block</h1>
+</ng-template>
+<ng-template #elseBlock>
+  <h1>else Block</h1>
+</ng-template> -->
+<br>
+<h3>Property binding</h3>
+<ng-template [ngIf]="show =='red'">
+  <h4>Red Block</h4>
+</ng-template>
+
+<ng-template [ngIf]="show =='green'">
+  <h4>Green Block</h4>
+</ng-template>  
+
+<ng-template [ngIf]="show =='blue'">
+  <h4>Blue Block</h4>
+</ng-template>
+<br>
+<h3>Switch case in Angular</h3>
+<div [ngSwitch]="color">
+  <h4 style="color:red;" *ngSwitchCase="'red'">
+    This is Red Color
+  </h4>
+  <h4 style="color:blue;" *ngSwitchCase="'blue'">
+    This is blue Color
+  </h4>
+  <h4 style="color:pink;" *ngSwitchCase="'pink'">
+    This is pink Color
+  </h4>    
+</div>
+
+<h3>For loop in Angular</h3>
+<!-- <h4 *ngFor=" let mydata of data">
+  {{mydata.name}} {{mydata.age}} {{mydata.address}}
+</h4> -->
+
+<table border="4">
+  <tr>
+    <td >Name</td>
+    <td>Age</td>
+    <td>Address</td>
+    <td>Email</td>
+  </tr>
+  <tr *ngFor="let mydata of data">
+    <td>{{mydata.name}}</td>
+    <td>{{mydata.age}}</td>
+    <td>{{mydata.address}}</td>
+    <td>{{mydata.email}}</td>
+  </tr>
+</table>
+<h3>Simple Form</h3>
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+  <input 
+  type="text" 
+  ngModel name="username" 
+  placeholder="Enter Name"
+  ><br><br>
+  <input 
+  type="text" 
+  ngModel name="age" 
+  placeholder="Enter age"
+  ><br><br>
+  <input 
+  type="text" 
+  ngModel name="address" 
+  placeholder="Enter Address"
+  ><br><br>
+  <button>Get User Value</button>
+</form>
+
+<br>
+<app-header></app-header>
+  <h5>Welcome to Angular coding </h5>
+<app-footer></app-footer>
