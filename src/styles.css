@@ -1,5 +1,6 @@
 /* Add application styles & imports to this file! */
-h5{
+/* h5{
   margin: 0px;
   padding: 100px;
-}
+} */
+@import '~bootstrap/dist/css/bootstrap.min.css';

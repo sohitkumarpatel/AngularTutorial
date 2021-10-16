@@ -92,3 +92,11 @@
 <app-header></app-header>
   <h5>Welcome to Angular coding </h5>
 <app-footer></app-footer>
+
+<br>
+<h4>Style binding in Angular</h4>
+<h3 style="color:red">Header 1</h3>
+<h3 [style.color]="'green'">Header 1</h3>
+<h3 [style.color]="color">Dynamic Style</h3>
+<h3 [style.color]="err?'red':'green'">Dynamic Style</h3>
+<button (click)="updateColor()">update Color</button>

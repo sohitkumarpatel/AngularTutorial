@@ -9,8 +9,9 @@ export class AppComponent {
   name = 'You are the best singer';
   // show=false;
   show="green";
-  color="pink";
+  color="blue";
   currentVal = '';
+  err=false;
   disabledBox = true;
   getVal(val) {
     console.warn(val);
@@ -45,4 +46,8 @@ data=[
 getUserValue(value){
   console.warn(value);
 }
+updateColor(){
+  this.color="yellow";
+}
+
 }
